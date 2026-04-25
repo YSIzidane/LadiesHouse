@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ladies' House ☕ | مقهى بنات · قهوة وشاي</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Almarai', 'Segoe UI', 'Tahoma', sans-serif;
+            background: linear-gradient(145deg, #fff5f7 0%, #ffe9f0 100%);
+            color: #4a2e2e;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.8rem 1.5rem 3rem;
+        }
+
+        /* feminine cards */
+        .glass-card {
+            background: rgba(255, 248, 250, 0.9);
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(233, 150, 167, 0.25), 0 2px 6px rgba(255, 215, 225, 0.5);
+        }
+
+        /* profile header */
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            background: #fff9fc;
+            padding: 1.8rem 2rem;
+            border-radius: 2.5rem;
+            box-shadow: 0 10px 22px rgba(247, 167, 188, 0.15);
+            border: 1px solid #ffe2ec;
+        }
+
+        .avatar {
+            background: linear-gradient(135deg, #fbc2d5, #fda7c3);
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 18px rgba(248, 131, 171, 0.3);
+            border: 3px solid white;
+        }
+
+        .avatar i {
+            font-size: 4rem;
+            color: white;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-name h1 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            background: linear-gradient(125deg, #b34e6e, #e68a9e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .badge-verified {
+            background: #ffe0e8;
+            border-radius: 50px;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #c95a7a;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 2rem;
+            margin: 0.8rem 0 0.6rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #c6496d;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #846b74;
+        }
+
+        .bio {
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .location {
+            font-size: 0.85rem;
+            background: #ffeff3;
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 40px;
+            margin-top: 8px;
+        }
+
+        /* highlights section */
+        .highlight-section {
+            margin: 2rem 0 2.2rem;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 1.4rem;
+            flex-wrap: wrap;
+        }
+
+        .section-title h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(125deg, #c95a7a, #e08ea8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .section-title span {
+            background: #ffe2ec;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #b34e6e;
+        }
+
+        .highlights-grid {
+            display: flex;
+            gap: 1.2rem;
+            overflow-x: auto;
+            padding-bottom: 0.8rem;
+            scrollbar-width: thin;
+        }
+
+        .highlight-item {
+            text-align: center;
+            min-width: 85px;
+        }
+
+        .highlight-circle {
+            background: linear-gradient(145deg, #ffe2ec, #ffd3e0);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            box-shadow: 0 8px 14px rgba(185, 97, 124, 0.15);
+            border: 2px solid white;
+        }
+
+        .highlight-circle i {
+            font-size: 2.4rem;
+            color: #bd5f7c;
+        }
+
+        .highlight-item p {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #b14568;
+        }
+
+        /* products gallery */
+        .products-gallery {
+            margin: 2.8rem 0 2rem;
+        }
+
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            box-shadow: 0 12px 26px -10px rgba(128, 70, 87, 0.12);
+            border: 1px solid #ffe0e8;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 25px 30px -12px rgba(199, 99, 124, 0.25);
+            border-color: #fbc2d5;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.02);
+        }
+
+        .product-info {
+            padding: 1.2rem 1rem 1.4rem;
+        }
+
+        .product-title {
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            color: #3c2a2a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge-a-laune {
+            background: #ffdb88;
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 4px 9px;
+            border-radius: 50px;
+            color: #9b5e2c;
+        }
+
+        .product-desc {
+            font-size: 0.75rem;
+            color: #886e76;
+            margin: 6px 0;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #cf7292;
+            font-size: 1rem;
+            margin-top: 8px;
+            display: inline-block;
+            background: #fef0f4;
+            padding: 3px 12px;
+            border-radius: 30px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .fav-icon {
+            color: #eea2b8;
+        }
+
+        .inspire-quote {
+            background: #ffffffc9;
+            border-radius: 2rem;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 1.2rem;
+            text-align: center;
+            backdrop-filter: blur(4px);
+            border: 1px dashed #f5bfd1;
+        }
+
+        hr {
+            margin: 2rem 0 0.8rem;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #ffcddb, #ffa5c2, #ffcddb);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #b88297;
+            margin-top: 1.5rem;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fce4ec;
+            padding: 6px 18px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #b53e6a;
+            transition: 0.2s;
+            margin-top: 12px;
+            border: 1px solid #ffc0d0;
+        }
+
+        .instagram-link:hover {
+            background: #ffdae5;
+            transform: scale(1.02);
+            color: #972d55;
+        }
+
+        button.ghost-btn {
+            background: transparent;
+            border: 1.5px solid #e6aabd;
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-family: inherit;
+            font-weight: 600;
+            color: #b54e72;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        button.ghost-btn:hover {
+            background: #ffe3ec;
+        }
+
+        @media (max-width: 680px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .stats-row {
+                justify-content: center;
+            }
+            .profile-name {
+                justify-content: center;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe2ec;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e6aabc;
+            border-radius: 10px;
+        }
+
+        /* RTL fine-tuning */
+        .product-title, .product-desc, .price, .bio, .location, .inspire-quote p {
+            text-align: right;
+        }
+        .stats-row .stat {
+            text-align: center;
+        }
+        .highlight-item p {
+            text-align: center;
+        }
+        .section-title {
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- الهدر على طراز الإنستغرام -->
+    <div class="profile-header">
+        <div class="avatar">
+            <i class="fas fa-mug-hot"></i>
+        </div>
+        <div class="profile-info">
+            <div class="profile-name">
+                <h1>مقهى Ladies' House ☕</h1>
+                <div class="badge-verified"><i class="fas fa-check-circle"></i> كوفي شوب</div>
+            </div>
+            <div class="stats-row">
+                <div class="stat"><span class="stat-number">81</span><br><span class="stat-label">منشور</span></div>
+                <div class="stat"><span class="stat-number">3,351</span><br><span class="stat-label">متابع</span></div>
+                <div class="stat"><span class="stat-number">2,346</span><br><span class="stat-label">يتابع</span></div>
+            </div>
+            <div class="bio">
+                <i class="fas fa-heart" style="color:#e994b2;"></i> مقهى بناتي · شاي · قهوة · حليب <br>
+                🍵🍴🥤🍹 <strong>شاي ☕ قهوة 🥛 حليب</strong> <br>
+                <span class="location"><i class="fas fa-map-marker-alt"></i> حاسي بحبح (الجلفة) · الجزائر</span>
+            </div>
+        </div>
+        <div>
+            <button class="ghost-btn"><i class="far fa-heart"></i> متابعة</button>
+        </div>
+    </div>
+
+    <!-- قسم "المميز" (À la une) -->
+    <div class="highlight-section">
+        <div class="section-title">
+            <h2><i class="fas fa-star" style="font-size: 1.2rem;"></i> المميز</h2>
+            <span>✨ اختياراتنا ✨</span>
+        </div>
+        <div class="highlights-grid">
+            <div class="highlight-item"><div class="highlight-circle"><i class="fas fa-mug-saucer"></i></div><p>قهوة التوقيع</p></div>
+            <div class="highlight-item"><div class="highlight-circle"><i class="fas fa-leaf"></i></div><p>شاي عضوي</p></div>
+            <div class="highlight-item"><div class="highlight-circle"><i class="fas fa-cake-candles"></i></div><p>حلويات</p></div>
+            <div class="highlight-item"><div class="highlight-circle"><i class="fas fa-hand-peace"></i></div><p>فن اللاتيه</p></div>
+            <div class="highlight-item"><div class="highlight-circle"><i class="fas fa-milk"></i></div><p>حليب خاص</p></div>
+            <div class="highlight-item"><div class="highlight-circle"><i class="fas fa-crown"></i></div><p>اختيارات البنات</p></div>
+        </div>
+    </div>
+
+    <!-- معرض صور المنتجات -->
+    <div class="products-gallery">
+        <div class="section-title">
+            <h2><i class="fas fa-images"></i> صور المنتجات  •  حلوياتنا</h2>
+            <span>✨ تصفحي الإبداعات ✨</span>
+        </div>
+        <div class="grid-products">
+            <!-- منتج 1 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&h=300&fit=crop" alt="Caramel Latte" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">لاتيه كراميل <span class="badge-a-laune">مميز</span></div>
+                    <div class="product-desc">إسبريسو غني، كراميل منزلي، حليب رغوي</div>
+                    <div class="product-footer"><span class="price">450 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 2 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400&h=300&fit=crop" alt="Matcha Latte" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">ماتشا لاتيه <span class="badge-a-laune">مميز</span></div>
+                    <div class="product-desc">ماتشا احتفالي، حليب نباتي حسب الرغبة</div>
+                    <div class="product-footer"><span class="price">550 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 3 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&h=300&fit=crop" alt="Iced Cloud Milk" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">آيسد ميلك <span class="badge-a-laune">مميز</span></div>
+                    <div class="product-desc">قهوة مثلجة، حليب بارد وفانيليا</div>
+                    <div class="product-footer"><span class="price">490 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 4 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&h=300&fit=crop" alt="Moroccan Mint Tea" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">شاي بالنعناع 🌿</div>
+                    <div class="product-desc">شاي أخضر، نعناع طازج، سكر بلوري</div>
+                    <div class="product-footer"><span class="price">380 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 5 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1542718610-68c21eaa4c53?w=400&h=300&fit=crop" alt="Rose Milk" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">لاتيه ورد 🌹</div>
+                    <div class="product-desc">حليب لوز، شراب الورد الطبيعي</div>
+                    <div class="product-footer"><span class="price">520 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 6 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1580933073521-dc49ac0d4e6a?w=400&h=300&fit=crop" alt="Turkish Coffee" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">قهوة تركية و لقمة</div>
+                    <div class="product-desc">قهوة ناعمة مع راحة الحلقوم</div>
+                    <div class="product-footer"><span class="price">430 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 7 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1560743641-3914f2c45636?w=400&h=300&fit=crop" alt="Chai Latte" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">شاي لاتيه بالتوابل</div>
+                    <div class="product-desc">حليب سميك، قرفة، هيل، عسل</div>
+                    <div class="product-footer"><span class="price">490 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+            <!-- منتج 8 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Strawberry Frappe" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">فرابيه فراولة 🍓</div>
+                    <div class="product-desc">سموذي فراولة، كريمة مخفوقة</div>
+                    <div class="product-footer"><span class="price">590 دج</span><span class="fav-icon"><i class="fa-regular fa-heart"></i></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inspire-quote">
+            <p><i class="fas fa-lightbulb"></i> فكرة لك: <strong>غيري صور المنتجات</strong> عبر تعديل الروابط في خاصية "src". أسلوب أنثوي 100% ومريح.</p>
+        </div>
+    </div>
+
+    <!-- لمحة إضافية -->
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1rem 0 0.5rem;">
+        <div style="background: #fff4f7; border-radius: 38px; padding: 0.4rem 1.2rem;"><i class="fas fa-mug-hot"></i> قهوة · حليب · شاي</div>
+        <div style="background: #fff4f7; border-radius: 38px; padding: 0.4rem 1.2rem;"><i class="fas fa-cookie-bite"></i> بسكويت منزلي</div>
+        <div style="background: #fff4f7; border-radius: 38px; padding: 0.4rem 1.2rem;"><i class="fas fa-crown"></i> أجواء بناتية فاخرة</div>
+    </div>
+
+    <hr>
+    <footer>
+        <i class="fas fa-heart" style="color:#df8aa6;"></i> مقهى Ladies' House – حاسي بحبح (الجلفة) <i class="fas fa-heart" style="color:#df8aa6;"></i><br>
+        🍵 شاي · ☕ قهوة · 🥛 حليب – كل فنجان يحكي قصة حلوة
+        <!-- رابط الإنستغرام الخاص بك في الأسفل -->
+        <div style="margin-top: 18px;">
+            <a href="https://www.instagram.com/ys_tech_repair.hbb.17/" target="_blank" class="instagram-link" rel="noopener noreferrer">
+                <i class="fab fa-instagram fa-lg"></i> إنستغرام : @ys_tech_repair.hbb.17
+            </a>
+            <p style="font-size: 0.65rem; margin-top: 8px; opacity: 0.7;">تابعني على الإنستغرام للمزيد</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
