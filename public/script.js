@@ -1,131 +1,221 @@
 const products = [
   {
-    img: images.kanafa_big,
+    img: "kanafa_big",
     name: "كنافة بالمكسرات",
     cat: "حلويات شرقية",
     desc: "كنافة مقرمشة بالفستق والكاجو والشوكولاتة"
   },
   {
-    img: images.baqlawa,
+    img: "baqlawa",
     name: "مشوك",
     cat: "حلويات شرقية",
-    desc: "مشوك محشي بالفستق الطازج"
+    desc: "مشوك محشوة بالفستق الطازج"
   },
+
   {
-    img: images.kanafa_big,
-    name: "كنافة بالشوكولاتة",
-    cat: "حلويات شرقية",
-    desc: "كنافة متنوعة بصوص الشوكولاتة والمتشا"
-  },
-  {
-    img: images.desert_cup1,
-    name: "ديسيرت الفراولة",
+    img: "desert_cup1",
+    name: "ديسيرت فراولة",
     cat: "ديسيرت",
-    desc: "كريمة ناعمة مع فراولة طازجة ومتشا"
+    desc: "فراولة مع كريمة طرية وفستق"
   },
+
   {
-    img: images.cheesecake,
-    name: "تشيز كيك متنوع",
+    img: "cheesecake",
+    name: "تشيز كيك بالشوكولاتة",
     cat: "كيك وتشيز كيك",
     desc: "بنكهات الأوريو والمتشا والفراولة"
   },
   {
-    img: images.cheesecake2,
+    img: "cheesecake2",
     name: "تشيز كيك مشكل",
     cat: "كيك وتشيز كيك",
     desc: "تشيز كيك كريمي بتوبينج مشكل"
   },
   {
-    img: images.tiramisu,
+    img: "cake_strawberry",
+    name: "كيك الفراولة",
+    cat: "كيك وتشيز كيك",
+    desc: "كيك فراولة مع كريمة وفستق"
+  },
+  {
+    img: "tiramisu",
     name: "تيراميسو",
     cat: "كيك وتشيز كيك",
     desc: "تيراميسو إيطالي كلاسيكي"
   },
+
   {
-    img: images.mochi1,
+    img: "mochi1",
     name: "موتشي فاكهة",
     cat: "موتشي",
     desc: "موتشي ياباني بالمانغو والشوكولاتة"
   },
   {
-    img: images.mochi2,
+    img: "mochi2",
     name: "موتشي مانغو",
     cat: "موتشي",
-    desc: "موتشي طازج بالمانغو"
+    desc: "موتشي طازج بالمانغو الملون"
   },
+
   {
-    img: images.crepe,
+    img: "crepe",
     name: "كريب شوكولاتة",
     cat: "كريب",
     desc: "كريب بالشوكولاتة والنوتيلا"
   },
   {
-    img: images.crepe2,
+    img: "crepe2",
     name: "كريب متشا",
     cat: "كريب",
-    desc: "كريب بصوص المتشا"
+    desc: "كريب بصوص المتشا والشوكولاتة"
   },
+
   {
-    img: images.gratin,
+    img: "gratin",
     name: "غراتان البطاطا",
     cat: "مملحات",
-    desc: "غراتان بطاطا بالجبن الذهبي"
+    desc: "غراتان بطاطا بالجبن الذهبي المذاب في طاجين فخاري"
   },
   {
-    img: images.food1,
+    img: "food1",
     name: "طبق الشخشوخة",
     cat: "مملحات",
-    desc: "طبق تقليدي جزائري أصيل"
+    desc: "طبق تقليدي جزائري أصيل بالدجاج والبيض والخضروات"
   },
   {
-    img: images.soup,
-    name: "لاسوب",
+    img: "soup",
+    name: "شوربة بالجبن",
     cat: "مملحات",
-    desc: "شوربة دافئة بالجبن"
+    desc: "شوربة دافئة بالجبن المبشور مع خبز محمص"
   },
   {
-    img: images.rice_fries,
+    img: "rice_fries",
     name: "أرز بالدجاج وفريت",
     cat: "مملحات",
-    desc: "أرز بالدجاج وصوص كريمي"
+    desc: "أرز بالأعشاب مع دجاج بصوص كريمي وبطاطا مقلية"
+  },
+
+  {
+    img: "drinks",
+    name: "مشروبات الشاي والقهوة",
+    cat: "مشروبات",
+    desc: "شاي بالحليب وقهوة بالنعناع"
   },
   {
-    img: images.hotchoc,
+    img: "hotchoc",
     name: "شوكولاتة ساخنة",
     cat: "مشروبات",
-    desc: "شوكولاتة كريمية ساخنة"
+    desc: "شوكولاتة ساخنة كريمية مع قهوة وكيكة تفاح"
   },
   {
-    img: images.mojito,
+    img: "mojito",
     name: "موهيتو",
     cat: "مشروبات",
-    desc: "موهيتو بالنعناع والليمون"
+    desc: "موهيتو منعش بالنعناع والليمون والثلج"
   },
   {
-    img: images.strawberry_drink,
+    img: "strawberry_drink",
     name: "شراب فراولة فريش",
     cat: "مشروبات",
-    desc: "فراولة طازجة مثلجة"
+    desc: "شراب فراولة طازجة مثلج مع صوص الفراولة"
+  },
+
+  {
+    img: "strawberry_cake2",
+    name: "كيك فراولة مع وردة",
+    cat: "كيك وتشيز كيك",
+    desc: "كيك فراولة كريمي مزين بالوردة وفستق"
   },
   {
-    img: images.fruit_cake,
+    img: "fruit_cake",
     name: "كعكة الفواكه",
     cat: "كيك وتشيز كيك",
-    desc: "تشيز كيك بالفواكه"
+    desc: "تشيز كيك بالكريمة وتوبينج فراولة وليمون ومانغو"
   },
   {
-    img: images.cherry_tart,
+    img: "cherry_tart",
     name: "تارت الكرز",
     cat: "كيك وتشيز كيك",
-    desc: "تارت بكريمة وكرز"
+    desc: "تارت بكريمة الفانيليا وحبات الكرز الطازجة"
   },
+
   {
-    img: images.maskoutcha,
+    img: "maskoutcha",
     name: "مسكوتشا",
     cat: "ديسيرت",
-    desc: "كعكة جوز الهند"
+    desc: "كعكة جوز الهند الفاخرة بمسحوق السكر"
+  },
+
+  /* 🔥 الصور اللي قلت عنها "غير مستخدمة" رجعناها */
+  {
+    img: "dessert1",
+    name: "ديسيرت خاص",
+    cat: "ديسيرت",
+    desc: "حلوى كريمية بطبقات فاخرة"
+  },
+  {
+    img: "cheesecake3",
+    name: "تشيز كيك إضافي",
+    cat: "كيك وتشيز كيك",
+    desc: "تشيز كيك غني بطبقة فواكه إضافية"
+  },
+  {
+    img: "crepe3",
+    name: "كريب خاص",
+    cat: "كريب",
+    desc: "كريب محشي بنكهات متنوعة"
+  },
+  {
+    img: "coffe",
+    name: "قهوة خاصة",
+    cat: "مشروبات",
+    desc: "قهوة عربية وغربية فاخرة"
+  },
+  {
+    img: "latee",
+    name: "لاتيه",
+    cat: "مشروبات",
+    desc: "لاتيه كريمي بنكهة القهوة الناعمة"
   }
 ];
+const imgs = {
+  kanafa_big: "images/kanafa_big.jpg",
+  baqlawa: "images/baqlawa.jpg",
+
+  desert_cup1: "images/desert_cup1.jpg",
+  dessert1: "images/dessert1.jpg",
+
+  cheesecake: "images/cheesecake.jpg",
+  cheesecake2: "images/cheesecake2.jpg",
+  cheesecake3: "images/cheesecake3.jpg",
+  cake_strawberry: "images/cake_strawberry.jpg",
+  tiramisu: "images/tiramisu.jpg",
+
+  mochi1: "images/mochi1.jpg",
+  mochi2: "images/mochi2.jpg",
+
+  crepe: "images/crepe.jpg",
+  crepe2: "images/crepe2.jpg",
+  crepe3: "images/crepe3.jpg",
+
+  gratin: "images/gratin.jpg",
+  food1: "images/food1.jpg",
+  soup: "images/soup.jpg",
+  rice_fries: "images/rice_fries.jpg",
+
+  drinks: "images/drinks.jpg",
+  coffe: "images/coffe.jpg",
+  latee: "images/latee.jpg",
+  hotchoc: "images/hotchoc.jpg",
+  mojito: "images/mojito.jpg",
+  strawberry_drink: "images/strawberry_drink.jpg",
+
+  strawberry_cake2: "images/strawberry_cake2.jpg",
+  fruit_cake: "images/fruit_cake.jpg",
+  cherry_tart: "images/cherry_tart.jpg",
+
+  maskoutcha: "images/maskoutcha.jpg"
+};
 // Particles
 const hP=document.getElementById('hParticles');
 const cols=['#f5c800','#ffe566','#ff6eb4','#a0336a'];
