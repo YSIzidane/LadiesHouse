@@ -1,6 +1,51 @@
-const { products } = require("./products");
+const products = [
+  {"img": "kanafa_big", "name": "كنافة بالمكسرات", "cat": "حلويات شرقية", "desc": "كنافة مقرمشة بالفستق والكاجو والشوكولاتة"},
+   {"img": "baqlawa", "name": "مشوك", "cat": "حلويات شرقية", "desc": "مشوك محشوة بالفستق الطازج"},
+   {"img": "desert_cup1", "name": "ديسيرت فراولة", "cat": "ديسيرت", "desc": "فراولة مع كريمة طرية وفستق"},
+   {"img": "cheesecake", "name": "تشيز كيك بالشوكولاته", "cat": "كيك وتشيز كيك", "desc": "بنكهات الأوريو والمتشا والفراولة"},
+   {"img": "cheesecake2", "name": "تشيز كيك مشكل", "cat": "كيك وتشيز كيك", "desc": "تشيز كيك كريمي بتوبينج مشكل"}
+   {"img": "cake_strawberry2", "name": "كيك الفراولة", "cat": "كيك وتشيز كيك", "desc": "كيك فراولة مع كريمة وفستق"},
+   {"img": "tiramisu", "name": "تيراميسو", "cat": "كيك وتشيز كيك", "desc": "تيراميسو إيطالي كلاسيكي"},
+   {"img": "mochi1", "name": "موتشي فاكهة", "cat": "موتشي", "desc": "موتشي ياباني بالمانغو والشوكولاتة"},
+   {"img": "mochi2", "name": "موتشي مانغو", "cat": "موتشي", "desc": "موتشي طازج بالمانغو الملون"},
+   {"img": "crepe", "name": "كريب شوكولاتة", "cat": "كريب", "desc": "كريب بالشوكولاتة والنوتيلا"},
+   {"img": "crepe2", "name": "كريب  بالبيسطاج ","cat":"كريب", "desc":"كريب بمكريب مزين بالشكولاته والبيسطاج "},
+   {"img": "coffe", "name": "قهوة دافئة", "cat": "مشروبات", "desc": "قهوة دافئة "},
+   {"img": "crepe3", "name": "كريب بالشكولاته والفراولة", "cat": "كريب", "desc": "كريب بالشوكولاتة والنوتيلا"},
+   {"img": "cheesecake3", "name": "تشيز كيك مشكل", "cat": "كيك وتشيز كيك", "desc": "تشيز كيك كريمي بتوبينج مشكل"}
+ 
+ 
+  "dessert1": "images/dessert1.webp",
+  "tiramisu": "images/tiramisu.webp",
+  "cheesecake": "images/cheesecake.webp",
+  "cheesecake2": "images/cheesecake2.webp",
+  "cheesecake3": "images/cheesecake3.webp",
+  "baqlawa":"images/baqlawa.png",
+  "mochi1": "images/mochi1.webp",
+  "mochi2": "images/mochi2.webp",
 
-;
+  "crepe": "images/crepe.webp",
+  "crepe2": "images/crepe2.webp",
+  "crepe3": "images/crepe3.webp",
+
+  "gratin": "images/gratin.webp",
+  "food1": "images/food1.webp",
+  "soup": "images/soup.webp",
+  "rice_fries": "images/rice_fries.webp",
+
+  "coffe": "images/coffe.webp",
+  "latee": "images/latee.webp",
+  "drinks": "images/drinks.webp",
+  "hotchoc": "images/hotchoc.webp",
+  "mojito": "images/mojito.webp",
+  "strawberry_drink": "images/strawberry_drink.webp",
+
+  "strawberry_cake2": "images/strawberry_cake2.webp",
+  "fruit_cake": "images/fruit_cake.webp",
+  "cherry_tart": "images/cherry_tart.png",
+
+  "maskoutcha": "images/maskoutcha.webp"
+}
 // Particles
 const hP=document.getElementById('hParticles');
 const cols=['#f5c800','#ffe566','#ff6eb4','#a0336a'];
