@@ -1,41 +1,5 @@
-const { products } = require("./products");
+const { products, imgs } = require("./products");
 
-const imgs = {
-  "kanafa_big": "images/kanafa_big.webp",
-  "baqlawa": "images/baqlawa.webp",
-
-  "desert_cup1": "images/desert_cup1.webp",
-  "dessert1": "images/dessert1.webp",
-  "tiramisu": "images/tiramisu.webp",
-  "cheesecake": "images/cheesecake.webp",
-  "cheesecake2": "images/cheesecake2.webp",
-  "cheesecake3": "images/cheesecake3.webp",
-
-  "mochi1": "images/mochi1.webp",
-  "mochi2": "images/mochi2.webp",
-
-  "crepe": "images/crepe.webp",
-  "crepe2": "images/crepe2.webp",
-  "crepe3": "images/crepe3.webp",
-
-  "gratin": "images/gratin.webp",
-  "food1": "images/food1.webp",
-  "soup": "images/soup.webp",
-  "rice_fries": "images/rice_fries.webp",
-
-  "coffe": "images/coffe.webp",
-  "latee": "images/latee.webp",
-  "drinks": "images/drinks.webp",
-  "hotchoc": "images/hotchoc.webp",
-  "mojito": "images/mojito.webp",
-  "strawberry_drink": "images/strawberry_drink.webp",
-
-  "strawberry_cake2": "images/strawberry_cake2.webp",
-  "fruit_cake": "images/fruit_cake.webp",
-  "cherry_tart": "images/cherry_tart.png",
-
-  "maskoutcha": "images/maskoutcha.webp"
-};
 // Particles
 const hP=document.getElementById('hParticles');
 const cols=['#f5c800','#ffe566','#ff6eb4','#a0336a'];
