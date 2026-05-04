@@ -5,7 +5,7 @@ const imgs = {
 
   "desert_cup1": "images/desert_cup1.webp",
   "dessert1": "images/dessert1.webp",
-
+  "tiramisu": "images/tiramisu.webp",
   "cheesecake": "images/cheesecake.webp",
   "cheesecake2": "images/cheesecake2.webp",
   "cheesecake3": "images/cheesecake3.webp",
