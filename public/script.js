@@ -1,6 +1,6 @@
-const { products, imgs } = require("./products");
+const { products } = require("./products");
 const imgs = {
-"kanafa_big": "images/kanafa_big.webp",
+  "kanafa_big": "images/kanafa_big.webp",
   "baqlawa": "images/baqlawa.png",
 
   "desert_cup1": "images/desert_cup1.webp",
