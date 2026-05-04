@@ -1,40 +1,39 @@
 const products = [{"img": "kanafa_big", "name": "كنافة بالمكسرات", "cat": "حلويات شرقية", "desc": "كنافة مقرمشة بالفستق والكاجو والشوكولاتة"}, {"img": "baqlawa", "name": "مشوك", "cat": "حلويات شرقية", "desc": "مشوك محشوة بالفستق الطازج"},  {"img": "desert_cup1", "name": "ديسيرت فراولة", "cat": "ديسيرت", "desc": "فراولة مع كريمة طرية وفستق"}, {"img": "cheesecake", "name": "تشيز كيك بالشوكولاته", "cat": "كيك وتشيز كيك", "desc": "بنكهات الأوريو والمتشا والفراولة"}, {"img": "cheesecake2", "name": "تشيز كيك مشكل", "cat": "كيك وتشيز كيك", "desc": "تشيز كيك كريمي بتوبينج مشكل"}, {"img": "cake_strawberry", "name": "كيك الفراولة", "cat": "كيك وتشيز كيك", "desc": "كيك فراولة مع كريمة وفستق"}, {"img": "tiramisu", "name": "تيراميسو", "cat": "كيك وتشيز كيك", "desc": "تيراميسو إيطالي كلاسيكي"}, {"img": "mochi1", "name": "موتشي فاكهة", "cat": "موتشي", "desc": "موتشي ياباني بالمانغو والشوكولاتة"}, {"img": "mochi2", "name": "موتشي مانغو", "cat": "موتشي", "desc": "موتشي طازج بالمانغو الملون"}, {"img": "crepe", "name": "كريب شوكولاتة", "cat": "كريب", "desc": "كريب بالشوكولاتة والنوتيلا"}, {"img": "crepe2", "name": "كريب متشا", "cat": "كريب", "desc": "كريب بصوص المتشا والشوكولاتة"}, {"img": "gratin", "name": "غراتان البطاطا", "cat": "مملحات", "desc": "غراتان بطاطا بالجبن الذهبي المذاب في طاجين فخاري"}, {"img": "food1", "name": "طبق الشخشوخة", "cat": "مملحات", "desc": "طبق تقليدي جزائري أصيل بالدجاج والبيض والخضروات"}, {"img": "drinks", "name": "مشروبات الشاي والقهوة", "cat": "مشروبات", "desc": "شاي بالحليب وقهوة بالنعناع"}, {"img": "hotchoc", "name": "شوكولاتة ساخنة", "cat": "مشروبات", "desc": "شوكولاتة ساخنة كريمية مع قهوة وكيكة تفاح"}, {"img": "mojito", "name": "موهيتو", "cat": "مشروبات", "desc": "موهيتو منعش بالنعناع والليمون والثلج"}, {"img": "strawberry_drink", "name": "شراب فراولة فريش", "cat": "مشروبات", "desc": "شراب فراولة طازجة مثلج مع صوص الفراولة"}, {"img": "strawberry_cake2", "name": "كيك فراولة مع وردة", "cat": "كيك وتشيز كيك", "desc": "كيك فراولة كريمي مزين بالوردة وفستق"}, {"img": "fruit_cake", "name": "كعكة الفواكه", "cat": "كيك وتشيز كيك", "desc": "تشيز كيك بالكريمة وتوبينج فراولة وليمون ومانغو"}, {"img": "cherry_tart", "name": "تارت الكرز", "cat": "كيك وتشيز كيك", "desc": "تارت بكريمة الفانيليا وحبات الكرز الطازجة"}, {"img": "soup", "name": "شوربة بالجبن", "cat": "مملحات", "desc": "شوربة دافئة بالجبن المبشور مع خبز محمص"}, {"img": "rice_fries", "name": "أرز بالدجاج وفريت", "cat": "مملحات", "desc": "أرز بالأعشاب مع دجاج بصوص كريمي وبطاطا مقلية"}, {"img": "maskoutcha", "name": "مسكوتشا", "cat": "ديسيرت", "desc": "كعكة جوز الهند الفاخرة بمسحوق السكر"}];
-
 const imgs = {
-  "kanafa_big": "images/kanafa_big.jpg",
-  "baqlawa": "images/baqlawa.jpg",
+  "kanafa_big": "images/kanafa_big.webp",
+  "baqlawa": "images/baqlawa.webp",
 
-  "desert_cup1": "images/desert_cup1.jpg",
-  "dessert1": "images/dessert1.jpg",
+  "desert_cup1": "images/desert_cup1.webp",
+  "dessert1": "images/dessert1.webp",
 
-  "cheesecake": "images/cheesecake.jpg",
-  "cheesecake2": "images/cheesecake2.jpg",
-  "cheesecake3": "images/cheesecake3.jpg",
+  "cheesecake": "images/cheesecake.webp",
+  "cheesecake2": "images/cheesecake2.webp",
+  "cheesecake3": "images/cheesecake3.webp",
 
-  "mochi1": "images/mochi1.jpg",
-  "mochi2": "images/mochi2.jpg",
+  "mochi1": "images/mochi1.webp",
+  "mochi2": "images/mochi2.webp",
 
-  "crepe": "images/crepe.jpg",
-  "crepe2": "images/crepe2.jpg",
-  "crepe3": "images/crepe3.jpg",
+  "crepe": "images/crepe.webp",
+  "crepe2": "images/crepe2.webp",
+  "crepe3": "images/crepe3.webp",
 
-  "gratin": "images/gratin.jpg",
-  "food1": "images/food1.jpg",
-  "soup": "images/soup.jpg",
-  "rice_fries": "images/rice_fries.jpg",
+  "gratin": "images/gratin.webp",
+  "food1": "images/food1.webp",
+  "soup": "images/soup.webp",
+  "rice_fries": "images/rice_fries.webp",
 
-  "coffe": "images/coffe.jpg",
-  "latee": "images/latee.jpg",
-  "drinks": "images/drinks.jpg",
-  "hotchoc": "images/hotchoc.jpg",
-  "mojito": "images/mojito.jpg",
-  "strawberry_drink": "images/strawberry_drink.jpg",
+  "coffe": "images/coffe.webp",
+  "latee": "images/latee.webp",
+  "drinks": "images/drinks.webp",
+  "hotchoc": "images/hotchoc.webp",
+  "mojito": "images/mojito.webp",
+  "strawberry_drink": "images/strawberry_drink.webp",
 
-  "strawberry_cake2": "images/strawberry_cake2.jpg",
-  "fruit_cake": "images/fruit_cake.jpg",
-  "cherry_tart": "images/cherry_tart.jpg",
+  "strawberry_cake2": "images/strawberry_cake2.webp",
+  "fruit_cake": "images/fruit_cake.webp",
+  "cherry_tart": "images/cherry_tart.png",
 
-  "maskoutcha": "images/maskoutcha.jpg"
+  "maskoutcha": "images/maskoutcha.webp"
 };
 // Particles
 const hP=document.getElementById('hParticles');
