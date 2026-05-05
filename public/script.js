@@ -65,7 +65,10 @@ document.getElementById('cupEl').addEventListener('mouseenter',()=>{
 });
 
 // Category tabs
-['الكل', ...new Set(products.map(p => p.cat))].forEach((c,i)=>{
+const ALL_CATEGORY='الكل';
+const SAVORY_CATEGORY=(products.find(p=>['gratin','food1','soup','rice_fries'].includes(p.img))||{}).cat;
+const categories=[ALL_CATEGORY, ...new Set(products.map(p => p.cat))];
+categories.forEach((c,i)=>{
   const btn=document.createElement('button');
   btn.className='cat-btn'+(i===0?' active':'');
   btn.textContent=c; btn.dataset.cat=c;
@@ -95,14 +98,14 @@ function filterCat(cat,btn){
   document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.product-card').forEach(c=>{
-    c.classList.toggle('hidden',cat!=='الكل'&&c.dataset.cat!==cat);
+    c.classList.toggle('hidden',cat!==ALL_CATEGORY&&c.dataset.cat!==cat);
   });
   // Show/hide مملحات banner
   const banner=document.getElementById('malhatBanner');
-  if(cat==='مملحات'){
+  if(cat===SAVORY_CATEGORY){
     banner.style.display='flex';
     setTimeout(()=>banner.classList.add('visible'),50);
-  } else if(cat!=='الكل'){
+  } else if(cat!==ALL_CATEGORY){
     banner.style.display='none';
   } else {
     banner.style.display='flex';
@@ -126,6 +129,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
 document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: .1 }).observe(el));
+
+window.__ladiesHouseDuplicateGuard = true;
+
+if (!window.__ladiesHouseDuplicateGuard) {
 
 // Particles
 const hP=document.getElementById('hParticles');
@@ -235,3 +242,4 @@ const obs=new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: .1 }).observe(el));
+}
