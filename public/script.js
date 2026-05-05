@@ -67,6 +67,42 @@ document.getElementById('cupEl').addEventListener('mouseenter',()=>{
 // Category tabs
 const ALL_CATEGORY='الكل';
 const SAVORY_CATEGORY=(products.find(p=>['gratin','food1','soup','rice_fries'].includes(p.img))||{}).cat;
+const localImageMap={
+  kanafa_big:'images/kanafa_big.webp',
+  baqlawa:'images/baqlawa.png',
+  desert_cup1:'images/desert_cup1.webp',
+  cheesecake:'images/cheesecake.webp',
+  cheesecake2:'images/cheesecake2.webp',
+  tiramisu:'images/tiramisu.webp',
+  mochi1:'images/mochi1.webp',
+  mochi2:'images/mochi2.webp',
+  crepe:'images/crepe.webp',
+  crepe2:'images/crepe2.webp',
+  gratin:'images/gratin.webp',
+  food1:'images/food1.webp',
+  hotchoc:'images/hotchoc.webp',
+  mojito:'images/mojito.webp',
+  strawberry_drink:'images/strawberry_drink.webp',
+  strawberry_cake2:'images/strawberry_cake2.webp',
+  fruit_cake:'images/fruit_cake.webp',
+  cherry_tart:'images/cherry_tart.png',
+  soup:'images/soup.webp',
+  rice_fries:'images/rice_fries.webp',
+  maskoutcha:'images/maskoutcha.webp'
+};
+const galleryImageSources=[
+  ...new Set([
+    ...Object.values(localImageMap),
+    'images/cheesecake3.webp',
+    'images/crepe3.webp',
+    'images/coffe.webp',
+    'images/latee.webp',
+    'images/dessert1.webp'
+  ])
+];
+function getImageSrc(key){
+  return localImageMap[key] || imgs[key];
+}
 const categories=[ALL_CATEGORY, ...new Set(products.map(p => p.cat))];
 categories.forEach((c,i)=>{
   const btn=document.createElement('button');
@@ -83,7 +119,7 @@ products.forEach((p,i)=>{
   card.dataset.cat=p.cat;
   card.innerHTML=`
     <div class="card-img-wrap">
-      <img class="card-img" src="${imgs[p.img]}" alt="${p.name}" loading="lazy" onclick="openLB('${p.img}')">
+      <img class="card-img" src="${getImageSrc(p.img)}" alt="${p.name}" loading="lazy" onclick="openLB('${p.img}')">
     </div>
     <div class="card-body">
       <div class="card-cat">${p.cat}</div>
@@ -114,14 +150,15 @@ function filterCat(cat,btn){
 }
 
 // Gallery
-(Object.keys(imgs).slice(0, 8)).forEach(k=>{
+galleryImageSources.forEach(src=>{
   const div=document.createElement('div');div.className='g-item';
-  div.innerHTML=`<img src="${imgs[k]}" alt="" loading="lazy" onclick="openLB('${k}')">`;
+  div.innerHTML=`<img src="${src}" alt="" loading="lazy" onclick="openImageSrc('${src}')">`;
   (document.getElementById('galleryGrid')).appendChild(div);
 });
 
 // Lightbox
-function openLB(key){document.getElementById('lbImg').src=imgs[key];document.getElementById('lightbox').classList.add('open');}
+function openImageSrc(src){document.getElementById('lbImg').src=src;document.getElementById('lightbox').classList.add('open');}
+function openLB(key){openImageSrc(getImageSrc(key));}
 function closeLB(){document.getElementById('lightbox').classList.remove('open');}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
 
